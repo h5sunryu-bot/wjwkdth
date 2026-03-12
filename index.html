@@ -1,84 +1,63 @@
 <!doctype html>
 <html lang="ko">
 <head>
-
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <title>AI 시대, 인간을 다시 묻다</title>
-
-<meta name="description" content="AI 시대 인간의 의미를 탐구하는 북큐레이션">
 
 <style>
 
 :root{
---bg:#020617;
---bg2:#1f2937;
---card:#0b1120;
---border:rgba(148,163,184,0.35);
---text:#e5e7eb;
---muted:#9ca3af;
---accent:#38bdf8;
+--bg-gradient: radial-gradient(circle at top,#1f2937 0,#020617 45%,#020617 100%);
+--card-border:rgba(148,163,184,0.4);
+--text-main:#e5e7eb;
+--text-muted:#9ca3af;
 --radius:14px;
 }
 
-*{box-sizing:border-box}
+*{box-sizing:border-box;}
 
 body{
 margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","맑은 고딕",Arial,sans-serif;
-background:radial-gradient(circle at top,var(--bg2) 0,var(--bg) 50%);
-color:var(--text);
+background:var(--bg-gradient);
+color:var(--text-main);
 line-height:1.6;
 }
 
 .wrap{
 max-width:1200px;
-margin:auto;
-padding:20px;
+margin:40px auto;
+padding:0 20px;
 }
 
-.hero{
-
-background:linear-gradient(135deg,#0f172a,#020617);
-padding:50px 30px;
-border-radius:18px;
-border:1px solid var(--border);
-margin-bottom:50px;
+header{
+margin-bottom:40px;
 }
 
-.hero h1{
-font-size:36px;
+header h1{
+font-size:32px;
 margin-bottom:10px;
 }
 
-.hero p{
-color:var(--muted);
-max-width:700px;
-}
-
-.tag{
-margin-top:15px;
-font-size:13px;
-color:var(--muted);
+.lead{
+color:var(--text-muted);
+font-size:16px;
 }
 
 .section{
-margin-top:70px;
+margin-top:60px;
 }
 
-.section-title{
-display:flex;
-align-items:center;
-gap:10px;
+.section h2{
 font-size:24px;
 margin-bottom:10px;
 }
 
-.section-desc{
-color:var(--muted);
-max-width:700px;
+.section p{
+color:var(--text-muted);
 margin-bottom:25px;
+max-width:700px;
 }
 
 .grid{
@@ -88,23 +67,18 @@ gap:20px;
 }
 
 .card{
-
-background:var(--card);
-border:1px solid var(--border);
+background:#0b1120;
 border-radius:var(--radius);
 overflow:hidden;
+border:1px solid var(--card-border);
 cursor:pointer;
-transition:.25s;
+transition:.2s;
 display:flex;
 flex-direction:column;
-
 }
 
 .card:hover{
-
 transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(0,0,0,.6);
-
 }
 
 .cover{
@@ -119,12 +93,12 @@ flex:1;
 }
 
 .badge{
+display:inline-block;
 font-size:11px;
 padding:3px 8px;
 border-radius:999px;
 background:#4ade80;
 color:#000;
-display:inline-block;
 margin-bottom:6px;
 }
 
@@ -136,163 +110,209 @@ margin:0 0 4px 0;
 
 .subtitle{
 font-size:13px;
-color:var(--muted);
+color:var(--text-muted);
 margin-bottom:6px;
 }
 
 .desc{
 font-size:13px;
+color:#e5e7eb;
 opacity:.9;
-}
-
-footer{
-margin-top:70px;
-color:var(--muted);
-font-size:13px;
-text-align:center;
 }
 
 </style>
 
 <script>
-
 function goLibrary(title){
-
-try{navigator.clipboard.writeText(title)}catch(e){}
-
-const query=encodeURIComponent(title)
-
-const url=`https://umyeon.seocholib.or.kr/TotalSearch?keyword=${query}`
-
-window.open(url,'_blank')
-
+try{navigator.clipboard.writeText(title);}catch(e){}
+const query=encodeURIComponent(title);
+const url=`https://umyeon.seocholib.or.kr/TotalSearch?keyword=${query}`;
+window.open(url,'_blank');
 }
-
 </script>
-
 </head>
 
 <body>
 
 <main class="wrap">
 
-
-<section class="hero">
-
+<header>
 <h1>AI 시대, 인간을 다시 묻다</h1>
 
-<p>
-
-인공지능 기술이 빠르게 발전하는 시대,
-우리는 다시 질문하게 됩니다.
-
-기술은 인간을 대신할 수 있을까요?
-인간만이 할 수 있는 것은 무엇일까요?
-
-이번 북큐레이션은 인공지능 시대를 바라보는 다양한 시선을 소개합니다.
-인문학적 성찰, 사회적 논의, 그리고 소설 속 상상력까지
-AI 시대의 인간을 생각해 볼 책들을 모았습니다.
-
+<p class="lead">
+인공지능 기술이 빠르게 발전하는 시대, 우리는 다시 질문하게 됩니다.
 </p>
 
-<div class="tag">
-📌 표지를 클릭하면 책 제목이 복사되고 도서관 검색으로 이동합니다
-</div>
+<p class="lead">
+기술이 인간을 대신할 수 있을까? 인간만이 할 수 있는 것은 무엇일까?
+</p>
 
-</section>
+<p class="lead">
+이번 북큐레이션은 인공지능 시대를 바라보는 다양한 시선을 소개합니다.
+인문학적 성찰부터 사회적 논의, 그리고 소설 속 상상력까지
+AI 시대의 인간을 함께 생각해 볼 책들을 모았습니다.
+</p>
 
+<p class="lead">
+📌 표지를 클릭하면 책 제목이 복사되고 도서관 검색 페이지로 이동합니다.
+</p>
+
+</header>
+
+
+<!-- SECTION 1 -->
 
 <section class="section">
 
-<div class="section-title">
-🧠 AI와 인간을 이해하기
-</div>
+<h2>AI와 인간을 이해하기</h2>
 
-<p class="section-desc">
-AI 기술을 이해하는 것만큼 중요한 것은 인간의 의미를 다시 생각해 보는 일입니다.
-이 섹션에서는 인공지능 시대를 인문학적으로 바라보는 책들을 소개합니다.
+<p>
+AI 기술을 이해하는 것만큼 중요한 것은
+그 속에서 인간의 의미를 다시 생각해 보는 일입니다.
+이 섹션에서는 인공지능 시대를 인문학적 시선으로 바라보며
+인간의 역할과 가능성을 탐색하는 책들을 소개합니다.
 </p>
 
 <div class="grid">
 
 <article class="card" onclick="goLibrary('AI, 인문학에 길을 묻다')">
-<img loading="lazy" class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791173351396.jpg">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791173351396.jpg">
 <div class="body">
 <span class="badge">AI 인문</span>
 <h2 class="title">AI, 인문학에 길을 묻다</h2>
 <p class="subtitle">최재운</p>
-<p class="desc">AI 시대에 인문학이 어떤 역할을 할 수 있는지 탐구하는 책.</p>
+<p class="desc">인공지능 시대에 인간의 가치와 인문학의 역할을 탐구하는 책.</p>
 </div>
 </article>
 
 <article class="card" onclick="goLibrary('낯섦과 공존 : AI 시대의 세계관 확장 수업')">
-<img loading="lazy" class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791165384630.jpg">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791165384630.jpg">
 <div class="body">
 <span class="badge">AI 인문</span>
 <h2 class="title">낯섦과 공존</h2>
 <p class="subtitle">김태원</p>
-<p class="desc">AI 시대 새로운 세계관을 제시하는 인문학 수업.</p>
+<p class="desc">AI 시대에 필요한 새로운 세계관과 사고방식을 제시하는 인문학 강의.</p>
+</div>
+</article>
+
+<article class="card" onclick="goLibrary('어느날 미래가 도착했다 : AI시대 인간의 조건')">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788936480837.jpg">
+<div class="body">
+<span class="badge">AI 인문</span>
+<h2 class="title">어느날 미래가 도착했다</h2>
+<p class="subtitle">우숙영</p>
+<p class="desc">AI 시대에 인간이 갖추어야 할 새로운 조건을 이야기한다.</p>
+</div>
+</article>
+
+<article class="card" onclick="goLibrary('AI를 압도하는 내면 경쟁력')">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791191462357.jpg">
+<div class="body">
+<span class="badge">AI 인간</span>
+<h2 class="title">AI를 압도하는 내면 경쟁력</h2>
+<p class="subtitle">이헌주</p>
+<p class="desc">기술 시대에 더욱 중요해지는 인간다움의 힘을 이야기한다.</p>
 </div>
 </article>
 
 </div>
-
 </section>
 
 
+<!-- SECTION 2 -->
+
 <section class="section">
 
-<div class="section-title">
-⚖️ AI 시대를 비판적으로 바라보기
-</div>
+<h2>AI 시대를 비판적으로 바라보기</h2>
 
-<p class="section-desc">
-AI 기술은 사회와 인간의 경험을 바꾸는 힘을 가지고 있습니다.
-이 섹션에서는 인공지능의 윤리와 사회적 문제를 탐구합니다.
+<p>
+AI는 단순한 기술이 아니라 사회 구조와 인간의 경험을 바꾸는 힘입니다.
+이 섹션에서는 인공지능의 윤리, 노동, 경험의 변화 등
+기술의 이면을 살펴보는 책들을 소개합니다.
 </p>
 
 <div class="grid">
 
+<article class="card" onclick="goLibrary('생각의 주도권을 디자인하라')">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791194508236.jpg">
+<div class="body">
+<span class="badge">AI 사고</span>
+<h2 class="title">생각의 주도권을 디자인하라</h2>
+<p class="subtitle">박용후</p>
+<p class="desc">AI 시대에 인간이 질문과 사고의 주도권을 갖는 방법을 제시한다.</p>
+</div>
+</article>
+
 <article class="card" onclick="goLibrary('경험의 멸종')">
-<img loading="lazy" class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791167742063.jpg">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791167742063.jpg">
 <div class="body">
 <span class="badge">기술 비평</span>
 <h2 class="title">경험의 멸종</h2>
 <p class="subtitle">크리스틴 로젠</p>
-<p class="desc">기술이 인간의 경험을 어떻게 변화시키는지 분석한다.</p>
+<p class="desc">기술이 인간의 경험을 어떻게 대체하고 있는지 분석한다.</p>
 </div>
 </article>
 
 <article class="card" onclick="goLibrary('도덕적인 AI')">
-<img loading="lazy" class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791194330639.jpg">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791194330639.jpg">
 <div class="body">
 <span class="badge">AI 윤리</span>
 <h2 class="title">도덕적인 AI</h2>
 <p class="subtitle">월터 시넛암스트롱 외</p>
-<p class="desc">AI 기술이 제기하는 윤리적 문제를 탐구한다.</p>
+<p class="desc">AI 기술의 윤리적 문제를 다양한 사례로 탐구한다.</p>
+</div>
+</article>
+
+<article class="card" onclick="goLibrary('AI는 인간을 먹고 자란다')">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788965967149.jpg">
+<div class="body">
+<span class="badge">AI 사회</span>
+<h2 class="title">AI는 인간을 먹고 자란다</h2>
+<p class="subtitle">마크 그레이엄 외</p>
+<p class="desc">AI 산업 뒤에 숨겨진 보이지 않는 노동을 조명한다.</p>
 </div>
 </article>
 
 </div>
-
 </section>
 
 
+<!-- SECTION 3 -->
+
 <section class="section">
 
-<div class="section-title">
-🤖 AI 시대를 상상하는 이야기
-</div>
+<h2>AI 시대를 상상하는 이야기</h2>
 
-<p class="section-desc">
+<p>
 문학은 언제나 기술보다 먼저 미래를 상상합니다.
-AI와 인간이 함께 살아가는 세계를 소설 속에서 만나봅니다.
+소설 속에서 우리는 인공지능과 인간이 함께 살아가는
+새로운 세계를 만나게 됩니다.
 </p>
 
 <div class="grid">
 
+<article class="card" onclick="goLibrary('기억의 낙원')">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788901285498.jpg">
+<div class="body">
+<span class="badge">소설</span>
+<h2 class="title">기억의 낙원</h2>
+<p class="subtitle">김상균</p>
+<p class="desc">기억을 둘러싼 미래 사회를 그린 SF 소설.</p>
+</div>
+</article>
+
+<article class="card" onclick="goLibrary('안티 사피엔스')">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791167374288.jpg">
+<div class="body">
+<span class="badge">소설</span>
+<h2 class="title">안티 사피엔스</h2>
+<p class="subtitle">이정명</p>
+<p class="desc">인공지능 시대 인간의 존재를 묻는 장편소설.</p>
+</div>
+</article>
+
 <article class="card" onclick="goLibrary('나 같은 기계들')">
-<img loading="lazy" class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788954694063.jpg">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788954694063.jpg">
 <div class="body">
 <span class="badge">SF</span>
 <h2 class="title">나 같은 기계들</h2>
@@ -301,14 +321,18 @@ AI와 인간이 함께 살아가는 세계를 소설 속에서 만나봅니다.
 </div>
 </article>
 
+<article class="card" onclick="goLibrary('개의 설계사')">
+<img class="cover" src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791166687372.jpg">
+<div class="body">
+<span class="badge">소설</span>
+<h2 class="title">개의 설계사</h2>
+<p class="subtitle">단요</p>
+<p class="desc">기술과 인간의 경계를 묻는 상상력 넘치는 이야기.</p>
 </div>
+</article>
 
+</div>
 </section>
-
-
-<footer>
-서초구립 우면도서관 북큐레이션
-</footer>
 
 </main>
 
