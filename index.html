@@ -3,214 +3,184 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>미래가 도착했습니다</title>
 
 <style>
 
-/* 폰트 */
-
+/* 폰트 적용 */
 @font-face{
-font-family:'KBL';
-src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2208@1.0/KBLJumpextended.woff') format('woff');
+  font-family:'KBL';
+  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2208@1.0/KBLJumpextended.woff') format('woff');
+  font-weight:normal;
+  font-style:normal;
+}
+@font-face{
+  font-family:'Gmarket';
+  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight:500;
+  font-style:normal;
 }
 
-@font-face{
-font-family:'Gmarket';
-src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-}
-
-/* 기본 */
-
+/* 기본 스타일 */
 body{
-margin:0;
-background:#000;
-color:#f5f5f5;
-font-family:'Gmarket',sans-serif;
+  margin:0;
+  background:#000;
+  color:#f5f5f5;
+  font-family:'Gmarket',sans-serif;
 }
-
 .wrap{
-max-width:720px;
-margin:auto;
-padding:24px 16px 60px;
+  max-width:720px;
+  margin:auto;
+  padding:24px 16px 60px;
 }
 
-/* 메인타이틀 */
-
+/* 메인타이틀/서브타이틀 */
 header h1{
-font-family:'KBL',sans-serif;
-font-size:32px;
-text-align:left;
-margin-bottom:6px;
+  font-family:'KBL',sans-serif;
+  font-size:34px;
+  text-align:left;
+  margin-bottom:6px;
 }
-
 .subtitle-main{
-font-family:'KBL',sans-serif;
-font-size:24px;
-text-align:right;
-margin-bottom:28px;
+  font-family:'KBL',sans-serif;
+  font-size:27px;
+  text-align:right;
+  margin-bottom:28px;
+  color:#e5e7eb;
 }
 
-/* 설명 */
-
+/* 설명 영역 */
 .lead{
-font-size:15px;
-line-height:1.7;
-margin-bottom:16px;
-color:#d4d4d8;
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:20px;
+  color:#d4d4d8;
 }
-
+.lead strong{
+  color:#fff;
+  font-weight:600;
+}
 .lead.click{
-margin-top:26px;
+  margin-top:26px;
 }
 
 /* 섹션 */
-
 .section{
-margin-top:46px;
+  margin-top:80px;
 }
 
-/* 소제목 디자인 */
-
+/* 소제목 */
 .section-title{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:20px;
-font-weight:500;
-margin-bottom:20px;
+  font-size:19px; /* 1px 축소 */
+  font-weight:500;
+  line-height:1.3;
+  margin-bottom:18px;
 }
-
-.section-bar{
-width:4px;
-height:26px;
-background:#fff;
-border-radius:2px;
+.section-title span{
+  display:inline-block;
+  background:#fff;
+  width:4px;
+  height:20px;
+  margin:0 6px;
+  vertical-align:middle;
+  border-radius:2px;
 }
 
 /* 카드 리스트 */
-
 .grid{
-display:flex;
-flex-direction:column;
-gap:14px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
 }
 
 /* 카드 */
-
 .card{
-display:flex;
-gap:14px;
-background:#0b0b0b;
-border:1px solid #222;
-border-radius:12px;
-padding:12px;
-align-items:center;
-cursor:pointer;
-transition:transform .2s, box-shadow .2s;
+  display:flex;
+  gap:12px;
+  background:#0b0b0b;
+  border:1px solid #222;
+  border-radius:12px;
+  padding:12px;
+  align-items:center;
+  cursor:pointer;
+  transition:transform .2s, box-shadow .2s;
 }
-
-/* 모바일 터치 애니메이션 */
-
 .card:active{
-transform:scale(0.97);
+  transform:scale(0.97);
 }
-
-/* 데스크탑 hover */
-
 .card:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 16px rgba(0,0,0,0.5);
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.5);
 }
 
 /* 표지 */
-
 .cover{
-width:70px;
-height:96px;
-object-fit:contain;
-background:#000;
-border-radius:6px;
-transition:transform .25s;
+  width:70px;
+  height:96px;
+  object-fit:contain;
+  background:#000;
+  border-radius:6px;
+  transition:transform .25s;
 }
-
-/* hover 확대 */
-
 .card:hover .cover{
-transform:scale(1.06);
+  transform:scale(1.06);
 }
 
-/* 텍스트 */
-
+/* 텍스트 영역 */
 .info{
-display:flex;
-flex-direction:column;
-gap:4px;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
 }
-
 .title{
-font-size:18px;
-font-weight:600;
+  font-size:18px;
+  font-weight:600;
 }
-
 .author{
-font-size:15px;
-color:#a1a1aa;
+  font-size:14px;
+  color:#a1a1aa;
+}
+.call{
+  font-size:14px;
+  color:#9ca3af;
 }
 
-.call{
-font-size:14px;
-color:#9ca3af;
+/* 강조 단어 */
+.lead strong{
+  color:#fff;
+  font-weight:600;
 }
 
 </style>
 
 <script>
-
 function goLibrary(title){
-
-try{
-navigator.clipboard.writeText(title);
-}catch(e){}
-
-const query=encodeURIComponent(title)
-
-window.open(
-"https://umyeon.seocholib.or.kr/TotalSearch?keyword="+query,
-"_blank"
-)
-
+  try{navigator.clipboard.writeText(title);}catch(e){}
+  const query=encodeURIComponent(title);
+  window.open(`https://umyeon.seocholib.or.kr/TotalSearch?keyword=${query}`,'_blank');
 }
-
 </script>
 
 </head>
-
 <body>
 
 <main class="wrap">
 
 <header>
-
 <h1>🚀 미래가 도착했습니다</h1>
 <div class="subtitle-main">AI 시대를 준비하는 인문학</div>
 
 <p class="lead">
-AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
-그렇다면 우리는 무엇을 생각하고 어떤 선택을 하게 될까요?
+AI는 <strong>인간보다 빠르게 계산</strong>하고 <strong>더 많은 정보를 기억</strong>합니다.
 </p>
-
 <p class="lead">
-이미 우리 곁에 도착한 AI 시대를 이해하기 위해 인문학은 다시 질문을 던집니다.
-기술이 바꾸는 세계 속에서 인간다움은 무엇인지,
-그리고 우리는 AI와 어떤 미래를 만들어갈지에 대한 사유를 담았습니다.
+그렇다면 우리는 <strong>무엇을 생각하고</strong> 어떤 <strong>선택을 하게 될까요</strong>?
 </p>
-
 <p class="lead">
-‘이미 도착한 미래’, ‘인간이라는 질문’, ‘공존을 준비하다’
-세 가지 주제로 AI 시대를 바라보는 인문학적 시선을 소개합니다.
+이미 우리 곁에 도착한 AI 시대를 이해하기 위해 <strong>인문학은 다시 질문</strong>을 던집니다.
+기술이 바꾸는 세계 속에서 <strong>인간다움</strong>은 무엇인지,
+그리고 우리는 AI와 어떤 <strong>미래를 만들어갈지</strong> 사유합니다.
 </p>
-
 <p class="lead click">
 📌 표지를 클릭하면 책 제목이 복사되고 도서관 검색 페이지로 이동합니다.
 </p>
@@ -218,14 +188,10 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 </header>
 
 <!-- SECTION 1 -->
-
 <section class="section">
-
 <div class="section-title">
-<div class="section-bar"></div>
-🌐 이미 도착한 미래 AI가 바꾸는 세계
+이미 도착한 미래 <span></span> AI가 바꾸는 세계
 </div>
-
 <div class="grid">
 
 <div class="card" onclick="goLibrary('어느날 미래가 도착했다')">
@@ -268,14 +234,10 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 </section>
 
 <!-- SECTION 2 -->
-
 <section class="section">
-
 <div class="section-title">
-<div class="section-bar"></div>
-🧠 인간이라는 질문 기계 시대의 인간다움
+인간이라는 질문 <span></span> 시대의 인간다움
 </div>
-
 <div class="grid">
 
 <div class="card" onclick="goLibrary('AI, 인문학에 길을 묻다')">
@@ -318,14 +280,10 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 </section>
 
 <!-- SECTION 3 -->
-
 <section class="section">
-
 <div class="section-title">
-<div class="section-bar"></div>
-🤝 공존을 준비하다 AI와 함께 살아갈 미래
+공존을 준비하다 <span></span> AI와 함께 살아갈 미래
 </div>
-
 <div class="grid">
 
 <div class="card" onclick="goLibrary('AI를 압도하는 내면 경쟁력')">
@@ -368,6 +326,5 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 </section>
 
 </main>
-
 </body>
 </html>
