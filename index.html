@@ -6,17 +6,16 @@
 <title>미래가 도착했습니다</title>
 
 <style>
-
-/* 대체 폰트 Pretendard Variable */
+/* 폰트 */
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/pretendard/variable.css');
 
-body{
+body {
   margin:0;
   background:#000;
   color:#f5f5f5;
   font-family:'Pretendard',sans-serif;
 }
-.wrap{
+.wrap {
   max-width:720px;
   margin:auto;
   padding:24px 16px 60px;
@@ -27,10 +26,10 @@ header{
   background:#0b0b0b;
   border-radius:16px;
   padding:24px;
-  margin-bottom:40px;
+  margin-bottom:50px; /* 간격 늘림 */
   display:flex;
   flex-direction:column;
-  gap:4px;
+  gap:8px;
 }
 header h1{
   font-size:36px;
@@ -39,7 +38,7 @@ header h1{
   margin:0;
 }
 header .subtitle-main{
-  font-size:30px;
+  font-size:33px;
   font-weight:600;
   text-align:right;
   margin:0;
@@ -50,15 +49,30 @@ header .subtitle-main{
 .lead{
   font-size:15px;
   line-height:1.8;
-  margin-bottom:20px;
+  margin-bottom:24px; /* 간격 늘림 */
   color:#d4d4d8;
 }
 .lead strong{
   color:#fff;
   font-weight:600;
 }
-.lead.click{
-  margin-top:26px;
+
+/* 2번째 문단 온점/반점 기준 행바꿈 */
+.lead.break::after{
+  content:"";
+  display:block;
+}
+
+/* 표지 클릭 안내 영역 */
+.click-area{
+  border:1px solid #444;
+  border-radius:12px;
+  padding:12px;
+  margin-top:28px;
+  text-align:center;
+  font-size:15px;
+  color:#e5e7eb;
+  background:#0d0d0d;
 }
 
 /* 섹션 */
@@ -68,7 +82,7 @@ header .subtitle-main{
 
 /* 소제목 */
 .section-title{
-  font-size:18px; /* 1px 축소 */
+  font-size:17px;
   font-weight:500;
   line-height:1.3;
   margin-bottom:18px;
@@ -145,13 +159,6 @@ header .subtitle-main{
   font-size:14px;
   color:#9ca3af;
 }
-
-/* 강조 단어 */
-.lead strong{
-  color:#fff;
-  font-weight:600;
-}
-
 </style>
 
 <script>
@@ -171,19 +178,26 @@ function goLibrary(title){
 <div class="subtitle-main">AI 시대를 준비하는 인문학</div>
 
 <p class="lead">
-AI는 <strong>인간보다 빠르게 계산</strong>하고 <strong>더 많은 정보를 기억</strong>합니다.
+AI는 <strong>인간보다 빠르게 계산</strong>하고<br>
+<strong>더 많은 정보를 기억</strong>합니다.
+</p>
+<p class="lead break">
+그렇다면 우리는 <strong>무엇을 생각하고</strong>,<br>
+어떤 <strong>선택을 하게 될까요</strong>?
 </p>
 <p class="lead">
-그렇다면 우리는 <strong>무엇을 생각하고</strong> 어떤 <strong>선택을 하게 될까요</strong>?
-</p>
-<p class="lead">
-이미 우리 곁에 도착한 AI 시대를 이해하기 위해, <strong>인문학은 다시 질문</strong>을 던집니다.
-기술이 바꾸는 세계 속에서 <strong>인간다움</strong>은 무엇인지,
+이미 우리 곁에 도착한 AI 시대를 이해하기 위해, <strong>인문학은 다시 질문</strong>을 던집니다.<br>
+기술이 바꾸는 세계 속에서 <strong>인간다움</strong>은 무엇인지,<br>
 그리고 우리는 AI와 어떤 <strong>미래</strong>를 만들어갈지에 대한 사유를 담았습니다.
 </p>
-<p class="lead click">
-📌 표지를 클릭하면 책 제목이 복사되고 도서관 검색 페이지로 이동합니다.
+<p class="lead">
+‘이미 도착한 미래’, ‘인간이라는 질문’, ‘공존을 준비하다’<br>
+세 가지 주제로 AI 시대를 바라보는 인문학적 시선을 소개합니다.
 </p>
+
+<div class="click-area">
+📌 표지를 클릭하면 책 제목이 복사되고 도서관 검색 페이지로 이동합니다.
+</div>
 </header>
 
 <!-- SECTION 1 -->
