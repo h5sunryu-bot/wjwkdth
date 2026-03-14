@@ -43,22 +43,22 @@ body{
 
 /* HERO */
 .hero{
-  background:#0b0b0b;
+  background:#111214; /* 페이지 배경보다 아주 약간 밝게 */
   border-radius:16px;
-  padding:28px 18px 32px;
+  padding:28px 18px 40px;
   margin-bottom:28px;
   overflow:hidden;
 }
 
 .hero-head{
-  margin-bottom:30px;
+  margin-bottom:50px; /* 설명 영역과 간격 확장 */
 }
 
 .hero-row-top{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
-  gap:16px;
+  gap:10px;
 }
 
 .hero-line{
@@ -77,8 +77,8 @@ body{
 
 .hero-line2-wrap{
   display:flex;
-  justify-content:flex-end; /* 오른쪽 정렬 */
-  margin-top:18px;          /* 두 줄 간격 확대 */
+  justify-content:flex-end;
+  margin-top:18px;
 }
 
 .hero-line2{
@@ -87,25 +87,38 @@ body{
 
 .hero-sub{
   flex:0 0 auto;
-  margin-top:12px;
-  margin-left:10px;
-  font-size:clamp(13px, 3vw, 21px);
-  line-height:1.2;
-  color:#d4d4d8;
+  margin-top:22px;     /* 아래로 */
+  margin-left:-8px;    /* 좌측으로 */
+  font-size:clamp(15px, 3.4vw, 24px);
+  line-height:1.15;
+  color:#d8d8dc;
   white-space:nowrap;
   letter-spacing:-0.03em;
 }
 
 /* 설명 영역 */
 .description{
-  margin-top:18px;
+  margin-top:10px;
   font-size:15px;
-  line-height:1.9;
-  color:#d4d4d8;
+  line-height:1.95;
+  color:#6f7278; /* 기본 회색 */
+  letter-spacing:-0.01em;
 }
 
 .description p{
-  margin:0 0 22px 0;
+  margin:0 0 24px 0;
+}
+
+.description p:last-child{
+  margin-bottom:0;
+}
+
+.description .key{
+  color:#f1f3f5; /* 핵심 단어 밝게 */
+}
+
+.description .em{
+  color:#c8ccd1; /* 중간 강조 */
 }
 
 /* 클릭 안내 */
@@ -202,11 +215,11 @@ body{
   }
 
   .hero{
-    padding:22px 14px 28px;
+    padding:22px 14px 34px;
   }
 
   .hero-row-top{
-    gap:14px;
+    gap:8px;
   }
 
   .hero-line{
@@ -214,28 +227,32 @@ body{
   }
 
   .hero-line2-wrap{
-    margin-top:22px;
+    margin-top:18px;
   }
 
   .hero-sub{
-    font-size:clamp(11px, 3.25vw, 16px);
-    margin-top:10px;
-    margin-left:8px;
+    font-size:clamp(13px, 3.55vw, 18px);
+    margin-top:19px;
+    margin-left:-6px;
+  }
+
+  .hero-head{
+    margin-bottom:42px;
   }
 
   .description{
     font-size:14px;
-    line-height:1.8;
+    line-height:1.88;
   }
 }
 
 @media (max-width:420px){
   .hero{
-    padding:20px 12px 26px;
+    padding:20px 12px 32px;
   }
 
   .hero-row-top{
-    gap:12px;
+    gap:6px;
   }
 
   .hero-line{
@@ -243,12 +260,17 @@ body{
   }
 
   .hero-line2-wrap{
-    margin-top:26px; /* 좁은 화면에서 간격 더 확대 */
+    margin-top:20px;
   }
 
   .hero-sub{
-    font-size:clamp(10px, 3vw, 13px);
-    margin-top:9px;
+    font-size:clamp(12px, 3.45vw, 15px);
+    margin-top:18px;
+    margin-left:-4px;
+  }
+
+  .hero-head{
+    margin-bottom:38px;
   }
 }
 </style>
@@ -276,15 +298,23 @@ function goLibrary(title){
       </div>
 
       <div class="hero-line2-wrap">
-        <h1 class="hero-line hero-line2">도착했습니다.</h1>
+        <h1 class="hero-line hero-line2">도착했습니다</h1>
       </div>
     </div>
 
     <div class="description">
-      <p>AI는 인간보다 더 빠르게 계산하고 더 많은 정보를 기억합니다.</p>
-      <p>그렇다면 우리는 무엇을 생각해야 할까요?</p>
-      <p>이미 우리 곁에 도착한 AI 시대.</p>
-      <p>AI 시대를 이해하는 세 가지 인문학적 시선을 소개합니다.</p>
+      <p>
+        <span class="key">AI</span>는 인간보다 더 빠르게 계산하고 더 많은 정보를 기억합니다.
+      </p>
+      <p>
+        그렇다면 우리는 무엇을 생각해야 할까요?
+      </p>
+      <p>
+        이미 우리 곁에 도착한 <span class="em">AI 시대</span>.
+      </p>
+      <p>
+        <span class="key">AI 시대</span>를 이해하는 <span class="key">세 가지 인문학적 시선</span>을 소개합니다.
+      </p>
     </div>
   </div>
 
