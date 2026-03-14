@@ -37,13 +37,14 @@ margin-bottom:40px;
 
 header h1{
 font-size:32px;
-margin-bottom:2px;
+margin-bottom:0;
 }
 
 .subtitle-main{
-font-size:18px;
+font-size:20px;
 color:#cbd5f5;
-margin-bottom:12px;
+margin-top:-6px;
+margin-bottom:14px;
 }
 
 .lead{
@@ -57,13 +58,13 @@ margin-top:60px;
 
 .section h2{
 font-size:24px;
-margin-bottom:10px;
+margin-bottom:18px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
 }
 
 .card{
@@ -114,31 +115,30 @@ color:var(--text-muted);
 margin-bottom:6px;
 }
 
+/* description 전체 제거 */
 .desc{
-font-size:13px;
-color:#e5e7eb;
-opacity:.9;
+display:none;
 }
 
-/* 모바일 최적화 */
+/* 모바일 */
 
-@media (max-width:600px){
+@media (max-width:700px){
 
 .grid{
-grid-template-columns:repeat(4,1fr);
-gap:10px;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+}
+
+.cover{
+aspect-ratio:2/3;
 }
 
 .title{
-font-size:13px;
+font-size:15px;
 }
 
 .subtitle{
-font-size:11px;
-}
-
-.desc{
-display:none;
+font-size:12px;
 }
 
 .badge{
@@ -202,7 +202,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">AI 인문</span>
 <h2 class="title">어느날 미래가 도착했다</h2>
 <p class="subtitle">우숙영</p>
-<p class="desc">AI 시대에 인간이 갖추어야 할 새로운 조건을 이야기한다.</p>
 </div>
 </article>
 
@@ -212,7 +211,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">AI 사회</span>
 <h2 class="title">AI는 인간을 먹고 자란다</h2>
 <p class="subtitle">마크 그레이엄 외</p>
-<p class="desc">AI 산업 뒤에 숨겨진 보이지 않는 노동을 조명한다.</p>
 </div>
 </article>
 
@@ -222,7 +220,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">기술 비평</span>
 <h2 class="title">경험의 멸종</h2>
 <p class="subtitle">크리스틴 로젠</p>
-<p class="desc">기술이 인간의 경험을 어떻게 대체하고 있는지 분석한다.</p>
 </div>
 </article>
 
@@ -232,7 +229,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">소설</span>
 <h2 class="title">안티 사피엔스</h2>
 <p class="subtitle">이정명</p>
-<p class="desc">인공지능 시대 인간의 존재를 묻는 장편소설.</p>
 </div>
 </article>
 
@@ -251,7 +247,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">AI 인문</span>
 <h2 class="title">AI, 인문학에 길을 묻다</h2>
 <p class="subtitle">최재운</p>
-<p class="desc">인공지능 시대에 인간의 가치와 인문학의 역할을 탐구하는 책.</p>
 </div>
 </article>
 
@@ -261,7 +256,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">AI 윤리</span>
 <h2 class="title">도덕적인 AI</h2>
 <p class="subtitle">월터 시넛암스트롱 외</p>
-<p class="desc">AI 기술의 윤리적 문제를 다양한 사례로 탐구한다.</p>
 </div>
 </article>
 
@@ -271,7 +265,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">AI 인문</span>
 <h2 class="title">낯섦과 공존</h2>
 <p class="subtitle">김태원</p>
-<p class="desc">AI 시대에 필요한 새로운 세계관과 사고방식을 제시하는 인문학 강의.</p>
 </div>
 </article>
 
@@ -281,7 +274,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">소설</span>
 <h2 class="title">기억의 낙원</h2>
 <p class="subtitle">김상균</p>
-<p class="desc">기억을 둘러싼 미래 사회를 그린 SF 소설.</p>
 </div>
 </article>
 
@@ -300,7 +292,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">AI 인간</span>
 <h2 class="title">AI를 압도하는 내면 경쟁력</h2>
 <p class="subtitle">이헌주</p>
-<p class="desc">기술 시대에 더욱 중요해지는 인간다움의 힘을 이야기한다.</p>
 </div>
 </article>
 
@@ -310,7 +301,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">AI 사고</span>
 <h2 class="title">생각의 주도권을 디자인하라</h2>
 <p class="subtitle">박용후</p>
-<p class="desc">AI 시대에 인간이 질문과 사고의 주도권을 갖는 방법을 제시한다.</p>
 </div>
 </article>
 
@@ -320,7 +310,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">소설</span>
 <h2 class="title">개의 설계사</h2>
 <p class="subtitle">단요</p>
-<p class="desc">기술과 인간의 경계를 묻는 상상력 넘치는 이야기.</p>
 </div>
 </article>
 
@@ -330,7 +319,6 @@ AI는 인간보다 빠르게 계산하고 더 많은 정보를 기억합니다.
 <span class="badge">SF</span>
 <h2 class="title">나 같은 기계들</h2>
 <p class="subtitle">이언 매큐언</p>
-<p class="desc">인간과 인공지능의 관계를 탐구하는 철학적 SF.</p>
 </div>
 </article>
 
