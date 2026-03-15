@@ -87,8 +87,8 @@ body{
 
 .hero-sub{
   flex:0 0 auto;
-  margin-top:48px;                 /* 아래로 더 이동 */
-  transform:translateX(-22px);     /* 좌측으로 더 이동 */
+  margin-top:48px;
+  transform:translateX(-22px);
   font-size:clamp(16px, 3.7vw, 25px);
   line-height:1.15;
   color:#d8d8dc;
@@ -122,10 +122,6 @@ body{
   font-weight:700;
 }
 
-.description .em{
-  color:#d3d7dc;
-}
-
 /* 클릭 안내 */
 .notice{
   border:1px solid #3a3a3a;
@@ -134,13 +130,13 @@ body{
   font-size:14px;
   text-align:center;
   color:#e5e7eb;
-  margin:32px 0 28px 0; /* 위는 더 내리고, 아래는 줄임 */
+  margin:32px 0 28px 0;
   background:#0c0c0c;
 }
 
 /* 섹션 */
 .section{
-  margin-top:64px; /* 기존보다 위로 */
+  margin-top:64px;
 }
 
 .section-title{
@@ -236,9 +232,10 @@ body{
   }
 
   .hero-sub{
-    font-size:clamp(14px, 3.9vw, 19px);
+    font-size:clamp(15px, 4.05vw, 19px); /* 살짝 확대, 줄바꿈 위험 낮춤 */
     margin-top:38px;
     transform:translateX(-16px);
+    letter-spacing:-0.035em;            /* 약간 조여서 잘림 방지 */
   }
 
   .hero-head{
@@ -278,9 +275,10 @@ body{
   }
 
   .hero-sub{
-    font-size:clamp(12.5px, 3.7vw, 16px);
+    font-size:clamp(13.5px, 3.95vw, 17px); /* 아주 작은 화면은 안전하게 */
     margin-top:34px;
     transform:translateX(-12px);
+    letter-spacing:-0.04em;
   }
 
   .hero-head{
@@ -341,7 +339,7 @@ function goLibrary(title){
       </p>
 
       <p>
-        <span class="key">AI 시대</span>를 이해하는 <span class="key">세 가지 인문학적 시선</span>을 소개합니다.
+        AI 시대를 이해하는 <span class="key">세 가지 인문학적 시선</span>을 소개합니다.
       </p>
     </div>
   </div>
